@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='apiverve_worldwideearthquakes',
-    version='1.1.12',
+    version='1.1.13',
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
@@ -12,7 +12,7 @@ setup(
     description='Earthquake is a simple tool for getting earthquake data. It returns the earthquake data for the past hour.',
     author='APIVerve',
     author_email='hello@apiverve.com',
-    url='https://apiverve.com',
+    url='https://apiverve.com/marketplace/earthquake?utm_source=pypi&utm_medium=homepage',
     classifiers=[
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
