@@ -486,8 +486,9 @@ from apiverve_worldwideearthquakes.apiClient import EarthquakeAPIClient
 
 api = EarthquakeAPIClient("[YOUR_API_KEY]")
 
+# This API does not require a Query
+
 try:
-    # This API does not require a Query
     result = api.execute()
     print(result)
 finally:
