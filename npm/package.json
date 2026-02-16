@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/earthquake",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Earthquake is a simple tool for getting earthquake data. It returns the earthquake data for the past hour.",
   "main": "index.js",
   "types": "index.d.ts",
