@@ -45,63 +45,12 @@ paths:
                 status: ok
                 error: null
                 data:
-                  earthquakes_LastUpdated: 1765922405
+                  earthquakes_LastUpdated: '2026-02-18T12:00:00.000Z'
                   earthquakes_LastHour: 9
+                  count24h: 187
+                  largestMagnitude24h: 5.2
+                  avgMagnitude24h: 1.84
                   earthquakes:
-                    - mag: 0.92
-                      place: 6 km W of Cobb, CA
-                      time: 1765922097290
-                      status: automatic
-                      tsunami: 0
-                      sig: 13
-                      net: nc
-                      types: ',nearby-cities,origin,phase-data,'
-                      nst: 8
-                      dmin: 0.01295
-                      rms: 0.01
-                      gap: 90
-                      magType: md
-                      type: earthquake
-                      title: M 0.9 - 6 km W of Cobb, CA
-                      coordinates:
-                        - -122.789665222168
-                        - 38.8241653442383
-                    - mag: 0.86
-                      place: 5 km NNW of The Geysers, CA
-                      time: 1765921547590
-                      status: automatic
-                      tsunami: 0
-                      sig: 11
-                      net: nc
-                      types: ',nearby-cities,origin,phase-data,'
-                      nst: 7
-                      dmin: 0.005419
-                      rms: 0.04
-                      gap: 164
-                      magType: md
-                      type: earthquake
-                      title: M 0.9 - 5 km NNW of The Geysers, CA
-                      coordinates:
-                        - -122.785499572754
-                        - 38.8171653747559
-                    - mag: 2.25
-                      place: 6 km NW of The Geysers, CA
-                      time: 1765921522850
-                      status: automatic
-                      tsunami: 0
-                      sig: 78
-                      net: nc
-                      types: ',focal-mechanism,nearby-cities,origin,phase-data,'
-                      nst: 54
-                      dmin: 0.01126
-                      rms: 0.05
-                      gap: 23
-                      magType: md
-                      type: earthquake
-                      title: M 2.3 - 6 km NW of The Geysers, CA
-                      coordinates:
-                        - -122.792831420898
-                        - 38.8193321228027
                     - mag: 3.4
                       place: 153 km SSW of Channel Islands Beach, California
                       time: 1765921110756
@@ -124,96 +73,24 @@ paths:
                       coordinates:
                         - -119.931
                         - 32.9103
-                    - mag: 0.76
-                      place: 3 km SW of Anderson Springs, CA
-                      time: 1765921074260
+                    - mag: 2.25
+                      place: 6 km NW of The Geysers, CA
+                      time: 1765921522850
                       status: automatic
                       tsunami: 0
-                      sig: 9
+                      sig: 78
                       net: nc
-                      types: ',nearby-cities,origin,phase-data,'
-                      nst: 8
-                      dmin: 0.01316
-                      rms: 0.08
-                      gap: 231
+                      types: ',focal-mechanism,nearby-cities,origin,phase-data,'
+                      nst: 54
+                      dmin: 0.01126
+                      rms: 0.05
+                      gap: 23
                       magType: md
                       type: earthquake
-                      title: M 0.8 - 3 km SW of Anderson Springs, CA
+                      title: M 2.3 - 6 km NW of The Geysers, CA
                       coordinates:
-                        - -122.709831237793
-                        - 38.7556648254395
-                    - mag: 2.01
-                      place: 14 km NW of Fillmore, CA
-                      time: 1765919646890
-                      status: automatic
-                      tsunami: 0
-                      sig: 62
-                      net: ci
-                      types: ',nearby-cities,origin,phase-data,scitech-link,'
-                      nst: 65
-                      dmin: 0.09047
-                      rms: 0.27
-                      gap: 40
-                      magType: ml
-                      type: earthquake
-                      title: M 2.0 - 14 km NW of Fillmore, CA
-                      coordinates:
-                        - -119.025833333333
-                        - 34.4875
-                    - mag: 0.73
-                      place: 10 km NW of The Geysers, CA
-                      time: 1765919646750
-                      status: automatic
-                      tsunami: 0
-                      sig: 8
-                      net: nc
-                      types: ',nearby-cities,origin,phase-data,'
-                      nst: 13
-                      dmin: 0.01553
-                      rms: 0.02
-                      gap: 107
-                      magType: md
-                      type: earthquake
-                      title: M 0.7 - 10 km NW of The Geysers, CA
-                      coordinates:
-                        - -122.853164672852
-                        - 38.8294982910156
-                    - mag: 3
-                      place: 69 km W of Nanwalek, Alaska
-                      time: 1765919380907
-                      status: automatic
-                      tsunami: 0
-                      sig: 138
-                      net: ak
-                      types: ',origin,phase-data,'
-                      nst: 129
-                      dmin: 0.1
-                      rms: 0.6
-                      gap: 84
-                      magType: ml
-                      type: earthquake
-                      title: M 3.0 - 69 km W of Nanwalek, Alaska
-                      coordinates:
-                        - -153.131
-                        - 59.288
-                    - mag: 0.99
-                      place: 2 km SE of Home Gardens, CA
-                      time: 1765919012560
-                      status: automatic
-                      tsunami: 0
-                      sig: 15
-                      net: ci
-                      types: ',nearby-cities,origin,phase-data,scitech-link,'
-                      nst: 33
-                      dmin: 0.07145
-                      rms: 0.18
-                      gap: 57
-                      magType: ml
-                      type: earthquake
-                      title: M 1.0 - 2 km SE of Home Gardens, CA
-                      coordinates:
-                        - -117.508833333333
-                        - 33.8653333333333
+                        - -122.792831
+                        - 38.819332
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
