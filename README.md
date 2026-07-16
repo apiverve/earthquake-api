@@ -187,11 +187,79 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Worldwide Earthquakes API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "earthquakes_LastUpdated": "2026-02-18T12:00:00.000Z",
+    "earthquakes_LastHour": 9,
+    "count24h": 187,
+    "largestMagnitude24h": 5.2,
+    "avgMagnitude24h": 1.84,
+    "earthquakes": [
+      {
+        "mag": 3.4,
+        "place": "153 km SSW of Channel Islands Beach, California",
+        "time": 1765921110756,
+        "felt": 1,
+        "cdi": 2.2,
+        "mmi": 2.538,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 178,
+        "net": "us",
+        "types": ",dyfi,nearby-cities,origin,phase-data,scitech-link,shakemap,",
+        "nst": 36,
+        "dmin": 0.479,
+        "rms": 0.65,
+        "gap": 247,
+        "magType": "ml",
+        "type": "earthquake",
+        "title": "M 3.4 - 153 km SSW of Channel Islands Beach, California",
+        "coordinates": [
+          -119.931,
+          32.9103
+        ]
+      },
+      {
+        "mag": 2.25,
+        "place": "6 km NW of The Geysers, CA",
+        "time": 1765921522850,
+        "status": "automatic",
+        "tsunami": 0,
+        "sig": 78,
+        "net": "nc",
+        "types": ",focal-mechanism,nearby-cities,origin,phase-data,",
+        "nst": 54,
+        "dmin": 0.01126,
+        "rms": 0.05,
+        "gap": 23,
+        "magType": "md",
+        "type": "earthquake",
+        "title": "M 2.3 - 6 km NW of The Geysers, CA",
+        "coordinates": [
+          -122.792831,
+          38.819332
+        ]
+      }
+    ]
+  }
 }
 ```
 
