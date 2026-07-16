@@ -25,15 +25,27 @@ namespace APIVerve.API.WorldwideEarthquakes
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("earthquakes_LastUpdated")]
-        public long EarthquakesLastUpdated { get; set; }
+        public DateTimeOffset? EarthquakesLastUpdated { get; set; }
 
         [JsonProperty("earthquakes_LastHour")]
-        public long EarthquakesLastHour { get; set; }
+        public long? EarthquakesLastHour { get; set; }
+
+        [JsonProperty("count24h")]
+        public long? Count24H { get; set; }
+
+        [JsonProperty("largestMagnitude24h")]
+        public double? LargestMagnitude24H { get; set; }
+
+        [JsonProperty("avgMagnitude24h")]
+        public double? AvgMagnitude24H { get; set; }
 
         [JsonProperty("earthquakes")]
         public Earthquake[] Earthquakes { get; set; }
@@ -42,22 +54,31 @@ namespace APIVerve.API.WorldwideEarthquakes
     public partial class Earthquake
     {
         [JsonProperty("mag")]
-        public double Mag { get; set; }
+        public double? Mag { get; set; }
 
         [JsonProperty("place")]
         public string Place { get; set; }
 
         [JsonProperty("time")]
-        public long Time { get; set; }
+        public long? Time { get; set; }
+
+        [JsonProperty("felt")]
+        public long? Felt { get; set; }
+
+        [JsonProperty("cdi")]
+        public double? Cdi { get; set; }
+
+        [JsonProperty("mmi")]
+        public double? Mmi { get; set; }
 
         [JsonProperty("status")]
-        public Status Status { get; set; }
+        public string Status { get; set; }
 
         [JsonProperty("tsunami")]
-        public long Tsunami { get; set; }
+        public long? Tsunami { get; set; }
 
         [JsonProperty("sig")]
-        public long Sig { get; set; }
+        public long? Sig { get; set; }
 
         [JsonProperty("net")]
         public string Net { get; set; }
@@ -65,34 +86,40 @@ namespace APIVerve.API.WorldwideEarthquakes
         [JsonProperty("types")]
         public string Types { get; set; }
 
-        [JsonProperty("nst", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty("nst")]
         public long? Nst { get; set; }
 
-        [JsonProperty("dmin", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty("dmin")]
         public double? Dmin { get; set; }
 
         [JsonProperty("rms")]
-        public double Rms { get; set; }
+        public double? Rms { get; set; }
 
-        [JsonProperty("gap", NullValueHandling = NullValueHandling.Ignore)]
-        public double? Gap { get; set; }
+        [JsonProperty("gap")]
+        public long? Gap { get; set; }
 
         [JsonProperty("magType")]
-        public MagType MagType { get; set; }
+        public string MagType { get; set; }
 
         [JsonProperty("type")]
-        public TypeEnum Type { get; set; }
+        public string Type { get; set; }
 
         [JsonProperty("title")]
         public string Title { get; set; }
 
         [JsonProperty("coordinates")]
-        public double[] Coordinates { get; set; }
+        public double?[] Coordinates { get; set; }
     }
 
-    public enum MagType { Md, Ml };
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
 
-    public enum Status { Automatic, Reviewed };
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
 
-    public enum TypeEnum { Earthquake };
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
+    }
 }
