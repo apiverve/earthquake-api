@@ -2,8 +2,9 @@ openapi: 3.0.4
 info:
   title: Worldwide Earthquakes
   description: >-
-    Earthquake is a simple tool for getting earthquake data. It returns the
-    earthquake data for the past hour.
+    Worldwide Earthquakes tracks global seismic activity recorded over the past
+    hour. It delivers magnitudes, epicenter coordinates, location names, tsunami
+    warning flags, and 24-hour activity summaries sourced from the USGS.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +19,7 @@ servers:
 paths:
   /v1/earthquake:
     get:
-      summary: Get Earthquake Data
+      summary: Worldwide Earthquakes
       description: >-
         Earthquake is a simple tool for getting earthquake data. It returns the
         earthquake data for the past hour.
@@ -61,8 +62,7 @@ paths:
                       tsunami: 0
                       sig: 178
                       net: us
-                      types: >-
-                        ,dyfi,nearby-cities,origin,phase-data,scitech-link,shakemap,
+                      types: ',dyfi,nearby-cities,origin,phase-data,scitech-link,shakemap,'
                       nst: 36
                       dmin: 0.479
                       rms: 0.65
