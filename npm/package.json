@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/earthquake",
-  "version": "1.2.0",
-  "description": "Earthquake is a simple tool for getting earthquake data. It returns the earthquake data for the past hour.",
+  "version": "1.2.2",
+  "description": "Worldwide Earthquakes tracks global seismic activity recorded over the past hour. It delivers magnitudes, epicenter coordinates, location names, tsunami warning flags, and 24-hour activity summaries sourced from the USGS.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "earthquake", "earthquake api", "earthquake tool", "earthquake software", "earthquake service"
+    "earthquake api", "live earthquake tracker", "worldwide seismic activity", "usgs earthquake data", "global earthquake monitor"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/earthquake-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/earthquake?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/earthquake?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
