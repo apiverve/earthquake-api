@@ -1,6 +1,6 @@
 # Worldwide Earthquakes API - PHP Package
 
-Earthquake is a simple tool for getting earthquake data. It returns the earthquake data for the past hour.
+Worldwide Earthquakes tracks global seismic activity recorded over the past hour. It delivers magnitudes, epicenter coordinates, location names, tsunami warning flags, and 24-hour activity summaries sourced from the USGS.
 
 ## Installation
 
@@ -132,11 +132,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/earthquake?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/earthquake?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/earthquake?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/earthquake?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/earthquake?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/earthquake?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
