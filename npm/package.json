@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/earthquake",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Worldwide Earthquakes tracks global seismic activity recorded over the past hour. It delivers magnitudes, epicenter coordinates, location names, tsunami warning flags, and 24-hour activity summaries sourced from the USGS.",
   "main": "index.js",
   "types": "index.d.ts",
