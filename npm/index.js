@@ -30,7 +30,7 @@ class earthquakeWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/earthquake';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {};
+        this.validationRules = {"period":{"type":"string","required":false,"default":"hour"},"minMagnitude":{"type":"number","required":false,"min":-2,"max":10},"lat":{"type":"number","required":false,"min":-90,"max":90},"lon":{"type":"number","required":false,"min":-180,"max":180},"radius":{"type":"number","required":false,"min":1,"max":20000,"default":500},"daily":{"type":"boolean","required":false,"default":false}};
     }
 
     /**

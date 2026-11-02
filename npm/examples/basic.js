@@ -14,12 +14,19 @@ const api = new earthquakeAPI({
 });
 
 // Example query
-// This API does not require a Query
+var query = {
+  period: "hour",
+  minMagnitude: 2.5,
+  lat: 34.05,
+  lon: -118.24,
+  radius: 500,
+  daily: false
+};
 
 // Make the API request using callback
 console.log('Making request to Worldwide Earthquakes API...\n');
 
-api.execute(function (error, data) {
+api.execute(query, function (error, data) {
     if (error) {
         console.error('Error occurred:');
         if (error.error) {

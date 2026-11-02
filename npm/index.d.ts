@@ -30,16 +30,36 @@ declare module '@apiverve/earthquake' {
       count24H:               number | null;
       largestMagnitude24H:    number | null;
       avgMagnitude24H:        number | null;
+      count7D:                number | null;
+      count30D:               number | null;
+      avgDailyCount30D:       number | null;
+      m45Count30D:            number | null;
+      largestMagnitude7D:     number | null;
+      largestMagnitude30D:    number | null;
+      largestPlace30D:        null | string;
+      largestTime30D:         number | null;
+      daysStored:             number | null;
+      period:                 null | string;
+      count:                  number | null;
       earthquakes:            Earthquake[];
+      daily:                  Daily[];
+  }
+  
+  interface Daily {
+      date:         Date | null;
+      count:        number | null;
+      maxMagnitude: number | null;
+      m45Count:     number | null;
   }
   
   interface Earthquake {
       mag:         number | null;
       place:       null | string;
       time:        number | null;
-      felt?:       number | null;
-      cdi?:        number | null;
-      mmi?:        number | null;
+      felt:        null;
+      cdi:         null;
+      mmi:         null;
+      alert:       null;
       status:      null | string;
       tsunami:     number | null;
       sig:         number | null;
@@ -53,6 +73,10 @@ declare module '@apiverve/earthquake' {
       type:        null | string;
       title:       null | string;
       coordinates: (number | null)[];
+      depthKM:     number | null;
+      id:          null | string;
+      url:         null | string;
+      distanceKM:  number | null;
   }
 
   export default class earthquakeWrapper {
