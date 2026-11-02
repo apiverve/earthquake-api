@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "apiverve_earthquake"
-  spec.version       = "1.2.3"
+  spec.version       = "1.2.4"
   spec.authors       = ["APIVerve"]
   spec.email         = ["hello@apiverve.com"]
 
   spec.summary       = "Worldwide Earthquakes API - Ruby Client"
-  spec.description   = "Worldwide Earthquakes tracks global seismic activity recorded over the past hour. It delivers magnitudes, epicenter coordinates, location names, tsunami warning flags, and 24-hour activity summaries sourced from the USGS."
+  spec.description   = "Worldwide Earthquakes tracks global seismic activity recorded over the past hour. It delivers magnitudes, epicenter coordinates and depth, location names, tsunami warning flags, USGS event links and 24-hour activity summaries sourced from the USGS. Filter by minimum magnitude; paid plans list the past 24 hours, search around any point, and add 7- and 30-day counts, the month's largest quake and daily history."
   spec.homepage      = "https://apiverve.com/marketplace/earthquake?utm_source=ruby&utm_medium=referral&utm_content=homepage"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 2.7.0"

@@ -10,7 +10,7 @@ module APIVerve
     #
     # @example Basic usage
     #   client = APIVerve::Earthquake::Client.new(api_key: "your_api_key")
-    #   response = client.execute({})
+    #   response = client.execute({ period: "hour", minMagnitude: 2.5, lat: 34.05, lon: -118.24, radius: 500, daily: true })
     #   puts response
     #
     # @see https://apiverve.com/marketplace/earthquake?utm_source=ruby&utm_medium=referral&utm_content=readme
@@ -19,7 +19,7 @@ module APIVerve
       DEFAULT_TIMEOUT = 30
 
       # Validation rules for parameters
-      VALIDATION_RULES = {}
+      VALIDATION_RULES = { 'period' => { type: 'string', required: false }, 'minMagnitude' => { type: 'number', required: false, min: -2, max: 10 }, 'lat' => { type: 'number', required: false, min: -90, max: 90 }, 'lon' => { type: 'number', required: false, min: -180, max: 180 }, 'radius' => { type: 'number', required: false, min: 1, max: 20000 }, 'daily' => { type: 'boolean', required: false } }
 
       # Format validation patterns
       FORMAT_PATTERNS = {
