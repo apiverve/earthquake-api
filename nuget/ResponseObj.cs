@@ -47,8 +47,59 @@ namespace APIVerve.API.WorldwideEarthquakes
         [JsonProperty("avgMagnitude24h")]
         public double? AvgMagnitude24H { get; set; }
 
+        [JsonProperty("count7d")]
+        public long? Count7D { get; set; }
+
+        [JsonProperty("count30d")]
+        public long? Count30D { get; set; }
+
+        [JsonProperty("avgDailyCount30d")]
+        public double? AvgDailyCount30D { get; set; }
+
+        [JsonProperty("m45Count30d")]
+        public long? M45Count30D { get; set; }
+
+        [JsonProperty("largestMagnitude7d")]
+        public long? LargestMagnitude7D { get; set; }
+
+        [JsonProperty("largestMagnitude30d")]
+        public double? LargestMagnitude30D { get; set; }
+
+        [JsonProperty("largestPlace30d")]
+        public string LargestPlace30D { get; set; }
+
+        [JsonProperty("largestTime30d")]
+        public long? LargestTime30D { get; set; }
+
+        [JsonProperty("daysStored")]
+        public long? DaysStored { get; set; }
+
+        [JsonProperty("period")]
+        public string Period { get; set; }
+
+        [JsonProperty("count")]
+        public long? Count { get; set; }
+
         [JsonProperty("earthquakes")]
         public Earthquake[] Earthquakes { get; set; }
+
+        [JsonProperty("daily")]
+        public Daily[] Daily { get; set; }
+    }
+
+    public partial class Daily
+    {
+        [JsonProperty("date")]
+        public DateTimeOffset? Date { get; set; }
+
+        [JsonProperty("count")]
+        public long? Count { get; set; }
+
+        [JsonProperty("maxMagnitude")]
+        public double? MaxMagnitude { get; set; }
+
+        [JsonProperty("m45Count")]
+        public long? M45Count { get; set; }
     }
 
     public partial class Earthquake
@@ -63,13 +114,16 @@ namespace APIVerve.API.WorldwideEarthquakes
         public long? Time { get; set; }
 
         [JsonProperty("felt")]
-        public long? Felt { get; set; }
+        public object Felt { get; set; }
 
         [JsonProperty("cdi")]
-        public double? Cdi { get; set; }
+        public object Cdi { get; set; }
 
         [JsonProperty("mmi")]
-        public double? Mmi { get; set; }
+        public object Mmi { get; set; }
+
+        [JsonProperty("alert")]
+        public object Alert { get; set; }
 
         [JsonProperty("status")]
         public string Status { get; set; }
@@ -109,6 +163,18 @@ namespace APIVerve.API.WorldwideEarthquakes
 
         [JsonProperty("coordinates")]
         public double?[] Coordinates { get; set; }
+
+        [JsonProperty("depthKm")]
+        public double? DepthKm { get; set; }
+
+        [JsonProperty("id")]
+        public string Id { get; set; }
+
+        [JsonProperty("url")]
+        public Uri Url { get; set; }
+
+        [JsonProperty("distanceKm")]
+        public long? DistanceKm { get; set; }
     }
 
     public partial class Premium

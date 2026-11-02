@@ -65,7 +65,15 @@ namespace APIVerve.API.WorldwideEarthquakes
         private readonly string _method = "GET";
 
         /// <summary>Validation rules for parameters</summary>
-        private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>();
+        private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
+        {
+            { "period", new ValidationRule { Type = "string", Required = false } },
+            { "minMagnitude", new ValidationRule { Type = "number", Required = false, Min = -2, Max = 10 } },
+            { "lat", new ValidationRule { Type = "number", Required = false, Min = -90, Max = 90 } },
+            { "lon", new ValidationRule { Type = "number", Required = false, Min = -180, Max = 180 } },
+            { "radius", new ValidationRule { Type = "number", Required = false, Min = 1, Max = 20000 } },
+            { "daily", new ValidationRule { Type = "boolean", Required = false } }
+        };
 
         /// <summary>Format validation patterns</summary>
         private static readonly Dictionary<string, System.Text.RegularExpressions.Regex> _formatPatterns = new Dictionary<string, System.Text.RegularExpressions.Regex>
