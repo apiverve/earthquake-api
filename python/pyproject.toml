@@ -1,10 +1,10 @@
 [project]
 name = "apiverve-worldwideearthquakes"
-version = "1.2.3"
+version = "1.2.4"
 authors = [
   { name="APIVerve", email="hello@apiverve.com" },
 ]
-description = "Worldwide Earthquakes tracks global seismic activity recorded over the past hour. It delivers magnitudes, epicenter coordinates, location names, tsunami warning flags, and 24-hour activity summaries sourced from the USGS."
+description = "Worldwide Earthquakes tracks global seismic activity recorded over the past hour. It delivers magnitudes, epicenter coordinates and depth, location names, tsunami warning flags, USGS event links and 24-hour activity summaries sourced from the USGS. Filter by minimum magnitude; paid plans list the past 24 hours, search around any point, and add 7- and 30-day counts, the month's largest quake and daily history."
 keywords = ["earthquake api", "live earthquake tracker", "worldwide seismic activity", "usgs earthquake data", "global earthquake monitor"]
 readme = "README.md"
 requires-python = ">=3.9"

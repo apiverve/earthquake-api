@@ -23,7 +23,14 @@ class ValidationError(EarthquakeAPIClientError):
 
 class EarthquakeAPIClient:
     # Validation rules for parameters (generated from schema)
-    VALIDATION_RULES = {}
+    VALIDATION_RULES = {
+        "period": {"type": "string", "required": False, "default": "hour"},
+        "minMagnitude": {"type": "number", "required": False, "min": -2, "max": 10},
+        "lat": {"type": "number", "required": False, "min": -90, "max": 90},
+        "lon": {"type": "number", "required": False, "min": -180, "max": 180},
+        "radius": {"type": "number", "required": False, "min": 1, "max": 20000, "default": 500},
+        "daily": {"type": "boolean", "required": False, "default": False}
+    }
 
     # Format validation patterns
     FORMAT_PATTERNS = {
