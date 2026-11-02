@@ -46,17 +46,29 @@ final _formatPatterns = {
 
 /// Worldwide Earthquakes API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/earthquake?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/earthquake?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
-
+/// * [period] - Time window: hour (the past hour) or day (the past 24 hours)
+/// * [minMagnitude] - Only return earthquakes of at least this magnitude [min: -2, max: 10]
+/// * [lat] - Latitude to search around. With lon, returns only earthquakes within radius km, nearest first, each with distanceKm [min: -90, max: 90]
+/// * [lon] - Longitude to search around (use with lat) [min: -180, max: 180]
+/// * [radius] - Search radius in kilometers around lat/lon [min: 1, max: 20000]
+/// * [daily] - Include one row per UTC day for the last 30 days: event count, largest magnitude and M4.5+ count
 class EarthquakeClient {
   final String apiKey;
   final String baseUrl;
   final http.Client _httpClient;
 
   /// Validation rules for parameters.
-  static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{};
+  static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
+    'period': ValidationRule(type: 'string', required: false),
+    'minMagnitude': ValidationRule(type: 'number', required: false, min: -2, max: 10),
+    'lat': ValidationRule(type: 'number', required: false, min: -90, max: 90),
+    'lon': ValidationRule(type: 'number', required: false, min: -180, max: 180),
+    'radius': ValidationRule(type: 'number', required: false, min: 1, max: 20000),
+    'daily': ValidationRule(type: 'boolean', required: false),
+  };
 
   EarthquakeClient(this.apiKey, {
     this.baseUrl = 'https://api.apiverve.com/v1/earthquake',
@@ -124,13 +136,17 @@ class EarthquakeClient {
   /// Execute a request to the Worldwide Earthquakes API.
   ///
   /// Parameters are validated before sending the request.
-  Future<EarthquakeResponse> execute() async {
+  Future<EarthquakeResponse> execute(Map<String, dynamic> params) async {
+    // Validate parameters
+    _validateParams(params);
     if (apiKey.isEmpty) {
       throw EarthquakeException('API key is required. Get your API key at: https://apiverve.com');
     }
 
     try {
-      final uri = Uri.parse(baseUrl);
+      final uri = Uri.parse(baseUrl).replace(
+        queryParameters: params.map((key, value) => MapEntry(key, value.toString())),
+      );
 
       final response = await _httpClient.get(
         uri,

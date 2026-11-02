@@ -1,7 +1,7 @@
 name: apiverve_earthquake
-description: Earthquake is a simple tool for getting earthquake data. It returns the earthquake data for the past hour.
-version: 1.1.14
-homepage: https://apiverve.com/marketplace/earthquake?utm_source=dart&utm_medium=homepage
+description: "Worldwide Earthquakes tracks global seismic activity recorded over the past hour. It delivers magnitudes, epicenter coordinates and depth, location names, tsunami warning flags, USGS event links and 24-hour activity summaries sourced from the USGS. Filter by minimum magnitude; paid plans list the past 24 hours, search around any point, and add 7- and 30-day counts, the month's largest quake and daily history."
+version: 1.2.4
+homepage: https://apiverve.com/marketplace/earthquake?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/earthquake-api/tree/main/dart
 
 environment:
