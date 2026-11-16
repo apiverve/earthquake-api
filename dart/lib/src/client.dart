@@ -51,7 +51,7 @@ final _formatPatterns = {
 /// Parameters:
 /// * [period] - Time window: hour (the past hour) or day (the past 24 hours)
 /// * [minMagnitude] - Only return earthquakes of at least this magnitude [min: -2, max: 10]
-/// * [lat] - Latitude to search around. With lon, returns only earthquakes within radius km, nearest first, each with distanceKm [min: -90, max: 90]
+/// * [lat] - Latitude to search around. With lon, returns only earthquakes within radius km, nearest first, each with distanceKm. Sending lat without lon (or lon without lat) returns 400 [min: -90, max: 90]
 /// * [lon] - Longitude to search around (use with lat) [min: -180, max: 180]
 /// * [radius] - Search radius in kilometers around lat/lon [min: 1, max: 20000]
 /// * [daily] - Include one row per UTC day for the last 30 days: event count, largest magnitude and M4.5+ count
