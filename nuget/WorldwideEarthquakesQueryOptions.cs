@@ -23,7 +23,7 @@ namespace APIVerve.API.WorldwideEarthquakes
         public double? MinMagnitude { get; set; }
 
         /// <summary>
-        /// Latitude to search around. With lon, returns only earthquakes within radius km, nearest first, each with distanceKm
+        /// Latitude to search around. With lon, returns only earthquakes within radius km, nearest first, each with distanceKm. Sending lat without lon (or lon without lat) returns 400
         /// </summary>
         [JsonProperty("lat")]
         public double? Lat { get; set; }
