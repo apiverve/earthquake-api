@@ -49,7 +49,8 @@ paths:
           required: false
           description: >-
             Latitude to search around. With lon, returns only earthquakes within
-            radius km, nearest first, each with distanceKm
+            radius km, nearest first, each with distanceKm. Sending lat without
+            lon (or lon without lat) returns 400
           example: 34.05
         - name: lon
           in: query
